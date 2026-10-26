@@ -1,0 +1,919 @@
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CodeNile Academy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        
+    
+
+:root {
+    --main-color: #102a43;
+    --secondary-color: #00b894;
+    --light-color: #f4f7fa;
+    --text-color: #333333;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: white;
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    scroll-margin-top: 20px;
+}
+
+
+
+.navbar {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: var(--main-color);
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.join-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 30px;
+}
+
+.hero-text {
+    flex: 1;
+    animation: moveUp 1s ease;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    color: var(--main-color);
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+
+
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px 30px;
+    background-color: #eaf2f8;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.stat-box h2 {
+    color: var(--secondary-color);
+    font-size: 30px;
+}
+
+.stat-box p {
+    color: var(--main-color);
+}
+
+
+
+
+.courses {
+    padding: 50px 30px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: var(--main-color);
+    margin-bottom: 30px;
+}
+
+
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin: 10px auto 0;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.course-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #dddddd;
+}
+
+.course-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.course-card h3 {
+    color: var(--main-color);
+}
+
+.course-card a {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+
+.how-it-works {
+    padding: 50px 30px;
+    background-color: var(--light-color);
+}
+
+.steps {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.step {
+    flex: 1;
+    padding: 25px;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.step h3 {
+    color: var(--secondary-color);
+    font-size: 30px;
+}
+
+
+
+
+.why-us {
+    padding: 50px 30px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.feature {
+    padding: 25px;
+    background-color: #eaf2f8;
+    border-radius: 10px;
+    border-left: 5px solid var(--secondary-color);
+}
+
+
+.trainers {
+    padding: 50px 30px;
+    background-color: var(--light-color);
+}
+
+.trainers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.trainer-card {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.trainer-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+
+.projects {
+    padding: 50px 30px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 180px;
+    gap: 15px;
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+
+.project1 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+
+.project4 {
+    grid-column: span 2;
+}
+
+
+
+
+.newsletter {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--main-color);
+    color: white;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.newsletter-form input {
+    padding: 12px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter-form button {
+    padding: 12px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+.footer {
+    background-color: #0b1f33;
+    color: white;
+    padding: 40px 30px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #52606d;
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+
+
+
+.join-btn:hover,
+.hero-btn:hover,
+.course-card a:hover {
+    background-color: #008f72;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.footer a:hover {
+    color: var(--secondary-color);
+}
+
+
+
+
+@keyframes moveUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+.course-card h3 {
+    color: var(--main-color);
+}
+
+
+.nav-links > li {
+    margin: 0;
+}
+
+
+
+.hero-text p + a {
+    margin-top: 15px;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .statistics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        flex-direction: column;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .trainers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 150px;
+    }
+
+    .project1 {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .project4 {
+        grid-column: span 1;
+    }
+
+.footer{
+    background-color: red;
+}
+
+
+
+
+@media (max-width: 480px) {
+
+    .statistics {
+        grid-template-columns: 1fr;
+    }
+
+    .trainers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <h2 class="logo">CodeNile</h2>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#trainers">Trainers</a></li>
+            </ul>
+
+            <a href="#join" class="join-btn">Join Now</a>
+
+        </nav>
+    </header>
+
+
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <h1>Learn Coding and Build Your Future</h1>
+
+            <p>
+                Start your programming journey with CodeNile Academy.
+                Learn new skills and build real projects.
+            </p>
+
+            <a href="#courses" class="hero-btn">
+                Explore Courses
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80"
+                 alt="Students learning programming">
+
+        </div>
+
+    </section>
+
+    <section class="statistics">
+
+        <div class="stat-box">
+            <h2>1,200</h2>
+            <p>Students</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>6</h2>
+            <p>Courses</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>15</h2>
+            <p>Trainers</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>96%</h2>
+            <p>Projects</p>
+        </div>
+
+    </section>
+
+
+    <section class="courses" id="courses">
+
+        <h2 class="section-title">Popular Courses</h2>
+
+        <div class="courses-grid">
+
+            <div class="course-card">
+
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+                     alt="Web Development">
+
+                <h3>Web Development</h3>
+
+                <p>
+                    Learn HTML, CSS and build websites.
+                </p>
+
+                <a href="#join">Learn More</a>
+
+            </div>
+
+
+            <div class="course-card">
+
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+                     alt="Python Programming">
+
+                <h3>Python Programming</h3>
+
+                <p>
+                    Learn programming with Python.
+                </p>
+
+                <a href="#join">Learn More</a>
+
+            </div>
+
+
+            <div class="course-card">
+
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80"
+                     alt="UI UX Design">
+
+                <h3>UI/UX Design</h3>
+
+                <p>
+                    Learn how to design user-friendly interfaces.
+                </p>
+
+                <a href="#join">Learn More</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <section class="how-it-works">
+
+        <h2 class="section-title">How It Works</h2>
+
+        <div class="steps">
+
+            <div class="step">
+
+                <h3>1</h3>
+
+                <h4>Choose a Course</h4>
+
+                <p>
+                    Choose the course that matches your interests.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <h3>2</h3>
+
+                <h4>Register</h4>
+
+                <p>
+                    Complete the registration process.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <h3>3</h3>
+
+                <h4>Start Learning</h4>
+
+                <p>
+                    Learn new skills and build projects.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="why-us" id="about">
+
+        <h2 class="section-title">Why Choose Us?</h2>
+
+        <div class="features">
+
+            <div class="feature">
+
+                <h3>Practical Projects</h3>
+
+                <p>
+                    Practice your skills through real projects.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>Expert Trainers</h3>
+
+                <p>
+                    Learn from experienced instructors.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>Flexible Learning</h3>
+
+                <p>
+                    Learn step by step at your own pace.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>Career Support</h3>
+
+                <p>
+                    Prepare for future career opportunities.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    
+
+    <section class="trainers" id="trainers">
+
+        <h2 class="section-title">Meet Our Trainers</h2>
+
+        <div class="trainers-grid">
+
+            <div class="trainer-card">
+
+                <img src="images/trainer1.jpg"
+                     alt="Ahmed Ali">
+
+                <h3>Ahmed Ali</h3>
+
+                <p>Web Developer</p>
+
+            </div>
+
+
+            <div class="trainer-card">
+
+                <img src="images/trainer2.jpg"
+                     alt="Sara Mohamed">
+
+                <h3>Sara Mohamed</h3>
+
+                <p>Python Instructor</p>
+
+            </div>
+
+
+            <div class="trainer-card">
+
+                <img src="images/trainer3.jpg"
+                     alt="Omar Hassan">
+
+                <h3>Omar Hassan</h3>
+
+                <p>UI/UX Designer</p>
+
+            </div>
+
+            
+
+        </div>
+
+    </section>
+
+
+    
+
+    <section class="projects">
+
+        <h2 class="section-title">Student Projects</h2>
+
+        <div class="projects-grid">
+
+            <div class="project project1">
+                <img src="c:\Users\Eng.Esraa Hamada\Desktop\OIP.jpg" alt="Project 1">
+            </div>
+
+            <div class="project project2">
+                <img src="c:\Users\Eng.Esraa Hamada\Desktop\OIP.jpg" alt="Project 2">
+            </div>
+
+            <div class="project project3">
+                <img src="c:\Users\Eng.Esraa Hamada\Desktop\OIP.jpg" alt="Project 3">
+            </div>
+
+            <div class="project project4">
+                <img src="c:\Users\Eng.Esraa Hamada\Desktop\OIP.jpg" alt="Project 4">
+            </div>
+
+            <div class="project project5">
+                <img src="c:\Users\Eng.Esraa Hamada\Desktop\OIP.jpg" alt="Project 5">
+            </div>
+
+            <div class="project project6">
+                <img src="c:\Users\Eng.Esraa Hamada\Desktop\OIP.jpg" alt="Project 6">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    
+
+    <section class="newsletter" id="join">
+
+        <h2>Join Our Newsletter</h2>
+
+        <p>
+            Get updates about our latest courses.
+        </p>
+
+        <form class="newsletter-form">
+
+            <input
+                type="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </section>
+
+
+
+<section class="footer">
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+
+                <h2>CodeNile</h2>
+
+                <p>Learn today. Build tomorrow.</p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <a href="#home">Home</a>
+
+                <a href="#courses">Courses</a>
+
+                <a href="#about">About</a>
+
+            </div>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 CodeNile Academy. All rights reserved.
+        </p>
+
+    </footer>
+    </section>
+
+</body>
+
+</html>
